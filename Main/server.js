@@ -2,8 +2,10 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+
 //const routes = require('./controllers');
 const preferenceRouter = require('./controllers/api/prefRoute');
+
 const POIRouter = require('./controllers/api/POIRoute');
 const toursRouter = require('./controllers/api/ToursRoute');
 const helpers = require('./utils/helpers');
@@ -13,6 +15,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 
 // // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
@@ -34,6 +37,7 @@ const hbs = exphbs.create({ helpers });
 
 // app.use(session(sess));
 
+
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -49,4 +53,5 @@ app.use(toursRouter);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
+
 });
