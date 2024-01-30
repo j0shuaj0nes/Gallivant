@@ -4,19 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
+  <title>Gallivant</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
- <h1>hello</h1>
     <main class="container container-fluid mt-5">
+       <form action="/poi" method="GET"> 
+      <div>
+        <p>Select your city</p>
+        <select id="citySelect">
+          <option value="Bangalore">Bangalore</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Berlin">Berlin</option>
+          <option value="Dallas">Dallas</option>
+          <option value="London">London</option>
+          <option value="New York">New York</option>
+          <option value="Paris">Paris</option>
+          <option value="San Francisco">San Francisco</option>
+        </select>
+      </div>
+      </form>
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
   
 
 </body>
+
+<script src="./js/preference.js"></script> 
 
 </html>

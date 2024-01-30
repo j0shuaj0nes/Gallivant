@@ -4,6 +4,8 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 //const routes = require('./controllers');
 const preferenceRouter = require('./controllers/api/prefRoute');
+const POIRouter = require('./controllers/api/POIRoute');
+const toursRouter = require('./controllers/api/ToursRoute');
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
@@ -42,6 +44,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use(routes);
 app.use(preferenceRouter);
+app.use(POIRouter);
+app.use(toursRouter);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
