@@ -13,7 +13,7 @@ router.get('/api/pois', async (req, res) => {
     if (!city) {
       return res.status(404).json({ error: 'City not found' });
     }
-    const { north, west, south, east, limit = 10, offset = 0, categories } = req.query;
+    const { north, west, south, east, limit = 10, offset = 0, categories = sights} = req.query;
 
     const response = await axios.get('https://test.api.amadeus.com/v1/reference-data/locations/pois/by-square', {
       params: {

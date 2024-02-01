@@ -2,15 +2,19 @@ const router = require('express').Router();
 const { City, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+// This route handler renders the 'main' view
+router.get('/', async (req, res) => {
+  res.render('main');
+});
+
 router.get('/', async (req, res) => {
   try {
-    const cityData = await City.findAll({ });
+    // Fetch city data
+    const cityData = await City.findAll({});
     const cities = cityData.map((city) => city.get({ plain: true }));
 
-    res.render('homepage', { 
-      cities, 
-      logged_in: req.session.logged_in 
-    });
+    // Respond with JSON containing city data
+    res.json({ cities, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -44,12 +48,19 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// Handle form submission and redirect to POI route
-router.get('/poi', async (req, res) => {
-  const { city, option1, option2 } = req.query;
+// Handle the form submission
+router.post('/submit-form', (req, res) => {
+  const { city, option } = req.body;
 
-  // Redirect to POI route with selected city and preferences
-  res.redirect(`/poi?city=${city}&option1=${option1}&option2=${option2}`);
+  //redirect to a specific route
+  if (option === 'option1') {
+    res.redirect(`/poi?city=${city}`);
+  } else if (option === 'option2') {
+    res.redirect(`/tours?city=${city}`);
+  } else {
+    // Handle other cases or show an error
+    res.status(400).send('Invalid option selected');
+  }
 });
 
 module.exports = router;

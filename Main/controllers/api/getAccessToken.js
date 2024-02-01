@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = import('node-fetch');
 
 async function getAccessToken() {
   const clientId = process.env.CLIENT_ID;
@@ -30,5 +30,6 @@ async function getAccessToken() {
   }
 }
 
+module.exports = getAccessToken;
 
-getAccessToken();
+
