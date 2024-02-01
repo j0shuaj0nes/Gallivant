@@ -1,8 +1,8 @@
-const fetch = require('node-fetch');
+const fetch = import('node-fetch');
 
 async function getAccessToken() {
-  const clientId = 'MYSMw4frwQQ5zwYrBcfjG6WVBZLk1hIf';
-  const clientSecret = 'PGChiGGO8JHeCTPP';
+  const clientId = process.env.CLIENT_ID;
+  const clientSecret = process.env.CLIENT_SECRET;
   const tokenEndpoint = 'https://test.api.amadeus.com/v1/security/oauth2/token';
 
   try {
@@ -30,5 +30,6 @@ async function getAccessToken() {
   }
 }
 
+module.exports = getAccessToken;
 
-getAccessToken();
+

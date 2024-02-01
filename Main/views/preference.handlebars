@@ -1,17 +1,40 @@
 
+     <div id = "preference" class ="preference">
     <h1>What did you want to see? </h1>
     <form>
         <label>
-            <input type="checkbox" name="option1" {{#if option1Checked}}checked{{/if}}>
+            <input type="checkbox" id="option1" {{#if option1Checked}}checked{{/if}}>
             Points of Interest
         </label>
         <br>
         <label>
-            <input type="checkbox" name="option2" {{#if option2Checked}}checked{{/if}}>
-            Activities and Tours
+            <input type="checkbox" id="option2" {{#if option2Checked}}checked{{/if}}>
+            Activities
         </label>
+         <button type="submit">Submit</button>
     </form>
+    </div>
 
+    <div id = "list" class ="list">
+        <header><h1 class="listName">Points of Interests</h1></header>
+        <p>Save your favourites</p>
+        <div class="POIList" id="PoIList"></div>
+        <div class = "btn-container">
+          <button id="saveBtn" class="button1">
+            Save
+          </button>
+        </div>
+        </div>
 
+    <div id = "list" class ="list" style ="display: none" >
+        <header><h1 class="listName">Activities</h1></header>
+        <p>Save your favourites</p>
+        <div class="activityList" id="activityList"></div>
+        <div class = "btn-container">
+          <button id="saveBtn" class="button1">
+            Save
+          </button>
+        </div>
+        </div>
 
 <script src="./js/preference.js"></script> 
