@@ -1,0 +1,46 @@
+header div {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #bec6cb, #0A004B);
+    color: white;
+}
+
+header h1 {
+    padding-right: 200px;
+}
+
+.search-column{
+    width: 300px;
+    padding-left: 5px;
+    
+}
+
+.search-bar{
+    width: 300px;
+    border-radius: 10px;
+}
+
+.search-button{
+    width: 300px;
+    padding-bottom: 3px;
+    border: 0px, 0px, 2px, 0px, solid black;
+    background: lightblue;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.search-button-container{
+    margin-bottom: 12px;
+    border-bottom: 2px solid black; 
+    width: 300px;
+}
+
+.inputSpace{
+    margin-bottom: 12px;
+}
+
+.body {
+    background: url('/Main/views/UPhotos/pexels-gya-den-2303781.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
