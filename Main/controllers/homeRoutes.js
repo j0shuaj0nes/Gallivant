@@ -4,8 +4,16 @@ const withAuth = require('../utils/auth');
 
 // This route handler renders the 'main' view
 router.get('/', async (req, res) => {
-  res.render('main');
+  res.render('home');
 });
+
+
+
+router.get('/', async (req, res) => {
+  console.log('Accessed the preference route');
+  res.render('preference');
+});
+
 
 router.get('/', async (req, res) => {
   try {
