@@ -1,17 +1,12 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const POIRoutes = require('./POIRoute');
-const prefRoutes = require('./prefRoute');
-const activityRoutes = require('./activityRoute');
-const apiRoutes = require('./api');
-const homeRoutes = require('./homeRoutes');
-
+const activityRoute = require('./activityRoute');
+const POIRoute = require('./POIRoute');
+const prefRoute = require('./prefRoute');
 
 router.use('/users', userRoutes);
-router.use('/POI', POIRoutes);
-router.use('/pref', prefRoutes);
-router.use('/tours', activityRoutes);
-router.use('/', homeRoutes);
-router.use('/api', apiRoutes);
+router.use('/activity', activityRoute);
+router.use('/POI', POIRoute);
+router.use('/pref', prefRoute);
 
 module.exports = router;
