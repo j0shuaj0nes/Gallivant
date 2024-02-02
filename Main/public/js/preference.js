@@ -1,18 +1,33 @@
-const citySelect = document.getElementById('citySelect');
-const POIOption = document.getElementById('option1');
-const activityOption = document.getElementById('option2');
+const dropdownButton = document.querySelector('.dropdown-button');
+const citySelect = document.querySelector('.dropdown-options');
+const citySelectOptions = document.querySelectorAll('.dropdown-option');
+const POIOption = document.querySelector('.poi');
+const activityOption = document.querySelector('.attract');
 const poiListContainer = document.getElementById('POIList');
 const activityListContainer = document.getElementById('activityList');
 
-document.addEventListener("click", async function () {
-  try {
-    const selectedCity = citySelect.value;
+dropdownButton.addEventListener('click', () => {
+  citySelect.style.display = citySelect.style.display === 'none' ? 'block' : 'none';
+});
 
-    if (POIOption.checked) {
+  citySelectOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      const selectedCity = option.innerText;
+      console.log("Selected City:", selectedCity);
+
+      // Redirect to the preference handlebar using window.location.href
+      window.location.href = "./preference";
+    });
+  });
+
+  POIOption.addEventListener("click", async function () {
+    try {
+      
+      window.location.href = "./poi";
       // Make a request to the POI API route
       const poiResponse = await axios.get(`/api/pois?city=${selectedCity}`);
       console.log('Points of Interest:', poiResponse.data);
-
+  
       // Display the fetched POIs in the container
       poiListContainer.innerHTML = '';
       poiResponse.data.forEach(poi => {
@@ -22,11 +37,20 @@ document.addEventListener("click", async function () {
         `;
         poiListContainer.appendChild(poiItem);
       });
-    } else if (activityOption.checked) {
+    } catch (error) {
+      console.error('Error making POI API requests:', error.message);
+    }
+  });
+  
+  activityOption.addEventListener("click", async function () {
+    try {
+      const selectedCity = citySelect.value;
+  
+      window.location.href = "./attractions";
       // Make a request to the Activity API route
       const activityResponse = await axios.get(`/api/activities?city=${selectedCity}`);
       console.log('Activities:', activityResponse.data);
-
+  
       // Display the fetched activities in the container
       activityListContainer.innerHTML = '';
       activityResponse.data.forEach(activity => {
@@ -41,8 +65,7 @@ document.addEventListener("click", async function () {
         `;
         activityListContainer.appendChild(activityItem);
       });
+    } catch (error) {
+      console.error('Error making Activity API requests:', error.message);
     }
-  } catch (error) {
-    console.error('Error making API requests:', error.message);
-  }
-});
+  });

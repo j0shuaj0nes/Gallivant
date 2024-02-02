@@ -2,20 +2,30 @@ const router = require('express').Router();
 const { City, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-// This route handler renders the 'main' view
+// This route handler renders the 'home' view
 router.get('/', async (req, res) => {
   res.render('home');
 });
 
-
-
-router.get('/', async (req, res) => {
+// This route handler renders the 'preference' view
+router.get('/preference', async (req, res) => {
   console.log('Accessed the preference route');
   res.render('preference');
 });
 
+// This route handler renders the 'attractions' view
+router.get('/attractions', async (req, res) => {
+  console.log('Accessed the attractions route');
+  res.render('attractions');
+});
 
-router.get('/', async (req, res) => {
+// This route handler renders the 'poi' view
+router.get('/poi', async (req, res) => {
+  console.log('Accessed the poi route');
+  res.render('poi');
+});
+
+router.get('/home', async (req, res) => {
   try {
     // Fetch city data
     const cityData = await City.findAll({});
