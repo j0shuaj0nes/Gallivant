@@ -9,7 +9,9 @@ router.get('/', async (req, res) => {
 
 
 
+
 router.get('/preference', async (req, res) => {
+
   console.log('Accessed the preference route');
   res.render('preference');
 });
@@ -29,7 +31,9 @@ router.get('/', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
+
 router.get('/preference', withAuth, async (req, res) => {
+
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
@@ -38,7 +42,9 @@ router.get('/preference', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
+
     res.render('preference', {
+
       ...user,
       logged_in: true
     });
@@ -49,7 +55,9 @@ router.get('/preference', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
+
     res.redirect('/preference');
+
     return;
   }
 
