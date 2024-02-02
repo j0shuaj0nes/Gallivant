@@ -5,6 +5,6 @@ const POIRoute = require('./POIRoute');
 
 router.use('/users', userRoutes);
 router.use('/activity', activityRoute);
-router.use('/POI', POIRoute);
+router.use('/poi', POIRoute);
 
 module.exports = router;
