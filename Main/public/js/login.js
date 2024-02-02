@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
+      document.location.replace('/preference');
     } else {
       alert(response.statusText);
     }
@@ -37,12 +37,43 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/preference');
     } else {
       alert(response.statusText);
     }
   }
 };
+
+// function redirectToLogin() {
+//   document.location.replace('/login');
+// }
+// loginBtn.addEventListener('click', redirectToLogin)
+
+
+
+// const loginBtn = document.querySelector('.loginBtn1');
+// const SignUpBtn = document.querySelector('.signUpBtn1');
+// loginBtn.addEventListener('click', document.location.replace('/login'))
+
+
+
+// const redirectPage = (event) => {
+//   const loginBtn = document.querySelector('.loginBtn1');
+//   const SignUpBtn = document.querySelector('.signUpBtn1');
+//   loginBtn.addEventListener('click', document.location.replace('/login'))
+//   event.preventDefault();
+// };
+
+// document
+//   .querySelector('.loginBtn1')
+//   .addEventListener('click', redirectPage);
+
+// document
+//   .querySelector('.signUpBtn1')
+//   .addEventListener('click', redirectPage);
+
+
+
 
 document
   .querySelector('.login-form')
