@@ -15,5 +15,9 @@ https://developers.amadeus.com/self-service/category/destination-experiences/api
 Display drop down menu via event listeners (2023) https://stackoverflow.com/questions/75785524/display-drop-down-menu-via-event-listeners
 
 https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md
+https://github.com/amadeus4dev/amadeus-node
+
+https://www.youtube.com/watch?v=sEvFEoya4ew
+
 
 

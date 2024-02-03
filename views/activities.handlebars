@@ -1,12 +1,19 @@
-    <div id = "list" class ="list">
-        <header><h1 class="listName">Activities</h1></header>
-        <p>Save your favourites</p>
-        <div class="activityList" id="activityList"></div>
-        <div class = "btn-container">
-          <button id="saveBtn" class="button1">
-            Save
-          </button>
-        </div>
-        </div>
+  <h1>{{cityDisplay}}</h1>
+
+<div id="list" class="list">
+  <header><h1 class="listName">Activities</h1></header>
+  <div class="activityList" id="activityList">
+    {{#each activities}}
+      <div class="activity">
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        <p>{{price}}</p>
+        <p>{{duration}}</p>
+        <p>{{picture}}</p>
+        <p>{{bookingLink}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
 
 <script src="./js/activities.js"></script> 

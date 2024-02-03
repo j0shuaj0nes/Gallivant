@@ -13,7 +13,7 @@ router.get('/preference', async (req, res) => {
   res.render('preference');
 });
 
-// This route handler renders the 'attractions' view
+// This route handler renders the 'activites' view
 router.get('/activities', async (req, res) => {
   console.log('Accessed the activity route');
   res.render('activities');
@@ -24,6 +24,7 @@ router.get('/poi', async (req, res) => {
   console.log('Accessed the poi route');
   res.render('poi');
 });
+
 
 
 // Use withAuth middleware to prevent access to route
