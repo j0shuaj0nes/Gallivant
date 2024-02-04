@@ -9,8 +9,15 @@ https://developers.amadeus.com/self-service/category/destination-experiences/api
 
 https://developers.amadeus.com/self-service/category/destination-experiences/api-doc/tours-and-activities/api-reference
 
-https://www.npmjs.com/package/axios
 
+'JavaScript Dropdown menu - Interactive program' (2023) https://www.w3resource.com/javascript-exercises/event/javascript-event-handling-exercise-2.php
+
+Display drop down menu via event listeners (2023) https://stackoverflow.com/questions/75785524/display-drop-down-menu-via-event-listeners
+
+https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md
+https://github.com/amadeus4dev/amadeus-node
+
+https://www.youtube.com/watch?v=sEvFEoya4ew
 
 
 
