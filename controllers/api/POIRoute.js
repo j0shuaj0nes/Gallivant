@@ -37,18 +37,19 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/poi/:city', async (req, res) => {
-  try {
-  // Search the database for a city with an name that matches params
-  const cityName = await City.findByPk(req.params.city);
-  console.log(cityName)
-  // We use .get({ plain: true }) on the object to serialize it so that it only includes the data that we need. 
-  const cityDisplay = cityName.get({ plain: true });
-  // Then, the 'city' template is rendered and city is passed into the template.
-  res.render('poi', cityDisplay);
-  } catch (err) {
-      res.status(500).json(err);
-  }
-});
+// app.get('/', function(req, res) {
+//   const context
+  
+//   app.get('acct:chars', function(err, result){
+//       if(err) throw err
+  
+//       context = result;
+//       console.log(result); 
+//       res.render('/', context);
+  
+//       });
+  
+//   });
+
 
 module.exports = router; 
