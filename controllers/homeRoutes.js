@@ -25,6 +25,33 @@ router.get('/poi', async (req, res) => {
   res.render('poi');
 });
 
+router.get('/home/:city', async (req, res) => {
+  try {
+  // Search the database for a city with an name that matches params
+  const cityName = await City.findByPk(req.params.city);
+  console.log(cityName)
+  // We use .get({ plain: true }) on the object to serialize it so that it only includes the data that we need. 
+  const cityDisplay = cityName.get({ plain: true });
+  // Then, the 'city' template is rendered and city is passed into the template.
+  res.render('poi', cityDisplay);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+router.get('/home/:city', async (req, res) => {
+  try {
+  // Search the database for a city with an name that matches params
+  const cityName = await City.findByPk(req.params.city);
+  console.log(cityName)
+  // We use .get({ plain: true }) on the object to serialize it so that it only includes the data that we need. 
+  const cityDisplay = cityName.get({ plain: true });
+  // Then, the 'city' template is rendered and city is passed into the template.
+  res.render('activities', cityDisplay);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
 
 
 // Use withAuth middleware to prevent access to route

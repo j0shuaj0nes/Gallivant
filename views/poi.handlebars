@@ -1,17 +1,21 @@
-   <body>
+
+ <div>
+     <button id="loginBtn" class="loginBtn1"><a href="/login">Login</a></button>
+  </div>
+
   <h1>{{cityDisplay}}</h1>
 
    
    <div id = "list" class ="list">
         <header><h1 class="listName">Points of Interests</h1></header>
+     {{#each}}
       <p>
       {{name}}
     </p>
     <p>
       {{location}}
     </p>
+     {{/each}}
         </div>
-
-</body>
 
 <script src="./js/poi.js"></script> 
