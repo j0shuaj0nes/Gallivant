@@ -1,23 +1,16 @@
-   <div>
+
+ <div>
+    <button  id="homeBtn" class="homeBtn1"><a href="/">Home</a></button>
      <button id="loginBtn" class="loginBtn1"><a href="/login">Login</a></button>
+    <button  id="signUpBtn" class="signUpBtn1"><a href="/login">SignUp</a></button>
   </div>
- 
-  <h1>{{cityDisplay}}</h1>
+  
+  <h1 id='savedCity'></h1>
 
-<div id="list" class="list">
-  <header><h1 class="listName">Activities</h1></header>
-  <div class="activityList" id="activityList">
-    {{#each}}
-      <div class="activity">
-        <h3>{{name}}</h3>
-        <p>{{description}}</p>
-        <p>{{price}}</p>
-        <p>{{duration}}</p>
-        <p>{{picture}}</p>
-        <p>{{bookingLink}}</p>
-      </div>
-    {{/each}}
-  </div>
-</div>
+   
+   <div id = "list" class ="list">
+        <header><h1 class="listName">Activities</h1></header>
+  
+<div id='activityDisplay'></div>
 
-<script src="./js/activities.js"></script> 
+ <script src="./js/activity.js"></script> 
