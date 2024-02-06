@@ -1,60 +1,59 @@
 [
   {
-    "city": "Bangalore",
+    "name": "Bangalore",
     "latitudeNorth":13.023577,
     "latitudeWest":77.536856,
     "latitudeSouth":12.923210,
     "latitudeEast":77.642256
   },
   {
-    "city": "Barcelona",
+    "name": "Barcelona",
     "latitudeNorth":41.397158,
     "latitudeWest":2.160873,
-    "latitudeSouth":41.394582,
+    "latitudeSouth":41.347463,
     "latitudeEast":2.177181
   },
   {
-    "city": "Berlin",
+    "name": "Berlin",
     "latitudeNorth":52.541755,
     "latitudeWest":13.354201,
     "latitudeSouth":52.490569,
     "latitudeEast":13.457198
   },
   {
-    "city": "Dallas",
+    "name": "Dallas",
     "latitudeNorth":32.806993,
     "latitudeWest":-96.836857,
     "latitudeSouth":32.740310,
     "latitudeEast":-96.737293
   },
   {
-    "city": "London",
+    "name": "London",
     "latitudeNorth":51.520180,
     "latitudeWest":-0.169882,
     "latitudeSouth":51.484703,
     "latitudeEast":-0.061048
   },
   {
-    "city": "New York",
+    "name": "New York",
     "latitudeNorth":40.792027,
     "latitudeWest":-74.058204,
     "latitudeSouth":40.697607,
     "latitudeEast":-73.942847
   },
   {
-    "city": "Paris",
+    "name": "Paris",
     "latitudeNorth":48.91,
     "latitudeWest":2.25,
     "latitudeSouth":48.80,
     "latitudeEast":2.46
   },
   {
-    "city": "San Francisco",
+    "name": "San Francisco",
     "latitudeNorth":37.810980,
     "latitudeWest":-122.483716,
     "latitudeSouth":37.732007,
     "latitudeEast":-122.370076
   }
 ]
-
 

@@ -9,48 +9,20 @@ router.get('/', async (req, res) => {
 
 // This route handler renders the 'preference' view
 router.get('/preference', async (req, res) => {
-  console.log('Accessed the preference route');
+  console.log('Accessed the preference view');
   res.render('preference');
 });
 
 // This route handler renders the 'activites' view
 router.get('/activities', async (req, res) => {
-  console.log('Accessed the activity route');
+  console.log('Accessed the activity view');
   res.render('activities');
 });
 
 // This route handler renders the 'poi' view
 router.get('/poi', async (req, res) => {
-  console.log('Accessed the poi route');
+  console.log('Accessed the poi view');
   res.render('poi');
-});
-
-router.get('/home/:city', async (req, res) => {
-  try {
-  // Search the database for a city with an name that matches params
-  const cityName = await City.findByPk(req.params.city);
-  console.log(cityName)
-  // We use .get({ plain: true }) on the object to serialize it so that it only includes the data that we need. 
-  const cityDisplay = cityName.get({ plain: true });
-  // Then, the 'city' template is rendered and city is passed into the template.
-  res.render('poi', cityDisplay);
-  } catch (err) {
-      res.status(500).json(err);
-  }
-});
-
-router.get('/home/:city', async (req, res) => {
-  try {
-  // Search the database for a city with an name that matches params
-  const cityName = await City.findByPk(req.params.city);
-  console.log(cityName)
-  // We use .get({ plain: true }) on the object to serialize it so that it only includes the data that we need. 
-  const cityDisplay = cityName.get({ plain: true });
-  // Then, the 'city' template is rendered and city is passed into the template.
-  res.render('activities', cityDisplay);
-  } catch (err) {
-      res.status(500).json(err);
-  }
 });
 
 
@@ -78,7 +50,7 @@ router.get('/preference', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/');
     return;
   }
 

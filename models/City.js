@@ -5,7 +5,7 @@ class City extends Model {}
 
 City.init(
   {
-    city: {
+    name: {
         type: DataTypes.STRING,
         primaryKey: true,
         required: true,
