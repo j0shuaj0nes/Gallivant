@@ -6,6 +6,7 @@
   color: #202020;
   font-size: 100px;
   padding: 50px;
+
   text-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -62,6 +63,7 @@
   color: #202020;
   font-size: 30px;
   padding: 20px;
+
   text-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -119,6 +121,7 @@ a:active {
 }
 .btn-container {
   display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -127,6 +130,7 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .poi-button-container {
@@ -157,8 +161,10 @@ a:active {
 
 
 /* Dropdown button */
+
 .dropdown-button {
   align-items: center;
+
   background-color: #f1f1f1;
   color: #333;
   padding: 10px;
@@ -328,6 +334,74 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 10px;
 }
+
+#login {
+  padding: 10px;
+  margin: 5px;
+  background: #f1f1f1;
+  color: #202020;
+  font-size: 17px;
+  border: 1px solid grey;
+  cursor: pointer;
+  width: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+#signup {
+  padding: 10px;
+  margin: 5px;
+  background: #f1f1f1;
+  color: #202020;
+  font-size: 17px;
+  border: 1px solid grey;
+  cursor: pointer;
+  width: 15%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#prefTitle {
+  font-family: 'Playfair Display', serif;
+  margin: 50px;
+  padding: 20px;
+}
+
+.activity {
+  padding: 10px;
+  background: #f1f1f1;
+  color: #202020;
+  font-size: 17px;
+  border: 1px solid grey;
+  cursor: pointer;
+  width: 20%;
+  text-decoration: none;
+}
+
+.activity:hover {
+  background: #2196F3;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.poi {
+  padding: 10px;
+  background: #f1f1f1;
+  color: #202020;
+  font-size: 17px;
+  border: 1px solid grey;
+  cursor: pointer;
+  width: 20%;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.poi:hover {
+  background: #2196F3;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+li {
+  list-style-type: none;
+}
+
 
 #login {
   padding: 10px;
