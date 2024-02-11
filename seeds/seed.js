@@ -1,21 +1,21 @@
-const sequelize = require('../config/connection');
-const { User, City} = require('../models');
+// const sequelize = require('../config/connection');
+// const { User, City} = require('../models');
 
-const userData = require('./userData.json');
-const cityData = require('./cityData.json');
+// const userData = require('./userData.json');
+// const cityData = require('./cityData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 console.log(cityData)
 
-  const city = await City.bulkCreate(cityData, {
-    individualHooks: true,
-    returning: true,
-  });
+//   const city = await City.bulkCreate(cityData, {
+//     individualHooks: true,
+//     returning: true,
+//   });
 
 
-  process.exit(0);
+//   process.exit(0);
 
-};
+// };
 
-seedDatabase();
+// seedDatabase();
