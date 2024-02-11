@@ -11,19 +11,19 @@ City.init(
         required: true,
       },
       latitudeNorth: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(12,8),
         required: true,
       },
       latitudeWest: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(12,8),
         required: true,
       },
       latitudeSouth: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(12,8),
         required: true,
       },
       latitudeEast: {
-        type:DataTypes.DECIMAL,
+        type:DataTypes.DECIMAL(12,8),
         required: true,
       },
     },
