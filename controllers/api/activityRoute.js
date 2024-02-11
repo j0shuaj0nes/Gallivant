@@ -10,17 +10,19 @@ router.get('/:tempCity', async (req, res) => {
         name: req.params.tempCity 
       }
     })
-  
+    const cityInfo = cityData.get({plain:true})
+    console.log(cityInfo)
+
   const amadeusData =  new Amadeus({
       clientId: process.env.CLIENT_ID, 
       clientSecret: process.env.CLIENT_SECRET,
     })
    
    const amadeusReturn =  await amadeusData.shopping.activities.bySquare.get({
-      north: 48.91,
-      west: 2.25, 
-      south: 48.80,
-      east: 2.46
+     north: cityInfo.latitudeNorth,
+      west: cityInfo.latitudeWest, 
+      south: cityInfo.latitudeSouth,
+      east: cityInfo.latitudeEast
     })
 
     res.json(JSON.parse(amadeusReturn.body))
@@ -35,4 +37,5 @@ router.get('/:tempCity', async (req, res) => {
 });
 
 module.exports = router; 
+
 
