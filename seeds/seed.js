@@ -6,6 +6,7 @@ const cityData = require('./cityData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
+console.log(cityData)
 
   const city = await City.bulkCreate(cityData, {
     individualHooks: true,
