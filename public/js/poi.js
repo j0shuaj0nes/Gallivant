@@ -1,5 +1,6 @@
 const savedCity = localStorage.getItem('savedCity');
 
+//Get request to fetch the point of interest based on the city selected by the user
 const poi = async () => {
   const response = await fetch(`/api/poi/${savedCity}`, {
     method: 'GET',
