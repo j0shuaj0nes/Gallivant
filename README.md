@@ -2,9 +2,10 @@
 A world travel planning app which provides points of interests and attractions for a chosen city. This app makes is designed to streamline the process of researching travel. 
 Users can select different destinations and begin exploring if this is the right travel destination for them visit. 
 
-The motivation behind buidling Gallivant was to help users choose the right holiday and empowers them to make the most of every moment on your travels.
+The motivation behind buidling Gallivant was to help users choose the right holiday and empowers them to make the most of every moment on their travels.
 
-
+## Usage
+*Navigate in your browser to the Gallivant landing page using this [link]((https://gallivant-17c406878ae5.herokuapp.com/)
 
 ## Credits
 
