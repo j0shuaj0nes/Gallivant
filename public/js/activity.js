@@ -1,5 +1,6 @@
 const savedCity = localStorage.getItem('savedCity');
 
+//A GET request for the activities based on the selected city by the user 
 const activity = async () => {
   const response = await fetch(`/api/activities/${savedCity}`, {
     method: 'GET',
