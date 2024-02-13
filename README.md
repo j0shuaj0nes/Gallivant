@@ -50,7 +50,7 @@ https://github.com/amadeus4dev/amadeus-node
 https://www.youtube.com/watch?v=sEvFEoya4ew
 
 ## Link to Depolyed Web App
-https://j0shuaj0nes.github.io/Gallivant/
+https://gallivant-17c406878ae5.herokuapp.com/
 
 ## Link to Google Slide presentation
 https://docs.google.com/presentation/d/1e_rEHY4Cy2sITqu9pSuh2IPoTgo2lePanmoKpHiz7WQ/edit?usp=sharing
