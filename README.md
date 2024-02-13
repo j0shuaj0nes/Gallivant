@@ -10,7 +10,7 @@ Once the user is on the landing page they can choose to either login, signup, or
 <img width="1392" alt="Screenshot 2024-02-13 at 9 42 24 pm" src="https://github.com/j0shuaj0nes/Gallivant/assets/143937479/44f16116-5b75-42b1-8a21-6ee27d52966d">
 <img width="1389" alt="Screenshot 2024-02-13 at 9 43 27 pm" src="https://github.com/j0shuaj0nes/Gallivant/assets/143937479/f27eb796-a14d-4423-a4c1-6eb891219ac4">
 
-If the user selects to login or sign up, they will be navigated the login/signup page. Once they have filled the required fields, they will be directed back to the homepage where they can select a city from the drop down menu to start exploring. 
+If the user selects to login or sign up, they will be navigated to the login/signup page. Once they have filled the required fields, they will be directed back to the homepage where they can select a city from the drop down menu to start exploring. 
 <img width="1395" alt="Screenshot 2024-02-13 at 9 44 10 pm" src="https://github.com/j0shuaj0nes/Gallivant/assets/143937479/9db1912c-8d72-4899-b6d1-652acb1e6126">
 
 If the user selects a city to explore from the drop down, they will be navigated to the preference page where they can select to view either 'Points of Interest' or 'Activities' for the city they have selected. 
